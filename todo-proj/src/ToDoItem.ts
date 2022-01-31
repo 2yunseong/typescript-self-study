@@ -1,7 +1,7 @@
 class ToDoItem{
     public id: number;      // private, public, protected
     public task: string;
-    public complete: boolean;
+    public complete: boolean = false;
 
     constructor(id: number, task: string, complete: boolean){
         this.id = id
