@@ -7,4 +7,5 @@ const Data_1 = require("./Data");
 const TodoCollection_1 = __importDefault(require("./TodoCollection"));
 const myTodoCollection = new TodoCollection_1.default("yunseong", Data_1.data);
 console.log(`${myTodoCollection.userName}`);
-myTodoCollection.todoItems.forEach((item) => item.printDetails());
+const allToDoList = myTodoCollection.getTodoItems(true);
+allToDoList.forEach((item) => item.printDetails());

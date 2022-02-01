@@ -1,8 +1,12 @@
-import ToDoItem from "./ToDoItem";
+import ToDoItem from "./Model/ToDoItem";
 import { data } from "./Data";
-import ToDoCollection from "./TodoCollection";
+import ToDoCollection from "./Controller/TodoCollection";
 
-const myTodoCollection: ToDoCollection =  new ToDoCollection("yunseong", data)
+const myTodoCollection: ToDoCollection =  new ToDoCollection("yunseong", data);
 
 console.log(`${myTodoCollection.userName}`);
-myTodoCollection.todoItems.forEach((item) => item.printDetails());
+const allToDoList = myTodoCollection.getTodoItems(true);
+allToDoList.forEach((item) => item.printDetails());
+
+
+
